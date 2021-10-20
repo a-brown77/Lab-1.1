@@ -2,33 +2,47 @@ body {
 font-family : "Open Sans";
 }
 
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 a.name {
     font-weight: bold;
+    margin-top: 10px;
 }
 
 section.header-links {
-    color: #69696a;
     display: flex;
     flex-direction: column;
-    padding: 7px;
+    color: #69696a;
+    padding: 7px 7px 7px 0px;
 }
+
 section.header-links a {
     text-decoration: none;
 }
 
 button {
-    width: 90%;
+    width: 90vw;
     color: #FFF ;
     background-color: #000;
     border-color: #000;
     border-radius: 60px;
     padding: 2%;
+    margin-top: 10px;
+}
+
+h1 {
+    margin-left: 10px;
 }
 
 p.content {
     color:  #69696a;
     border-left: 3px solid  #69696a;
     padding-left: 10px;
+    margin-left: 10px;
 }
 
 footer {
@@ -58,15 +72,95 @@ p.footer {
 
 section.footer-links {
     display: inline;
-    padding-right: 10px;
 }
 section.footer-links a {
     text-decoration: none;
     text-decoration-color: #69696a;
+    padding: 0px 10px 0px 15px;
 }
 a:link {
     color: #69696a;
 }
 a:visited {
     color: #69696a;
+}
+
+
+
+@media only screen and (min-width:768px) {
+    header nav {
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    section.header-links {
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+
+    section.header-links a {
+        margin: 15px 10px 0px 10px;
+    }
+    button.hire {
+        width: 70px;
+        border-radius: 60px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+       justify-content: space-between;
+    }
+
+    p.content {
+        width: 50vw;
+    }
+
+    button {
+        width: 50vw;
+    }
+
+    section.circles {
+        position: relative;
+        width: 400px;
+       
+    }
+
+    div.pink-circle {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        background-color: rgba(247, 136, 167, 0.6);
+        z-index: 2;
+        position: absolute;
+        right: 35px;
+        top: 25px;
+        transform: translate(-35px, 25px);
+    }
+
+    div.orange-circle {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        background-color: rgba(247, 193, 162, 0.7) ;
+        z-index: 3;
+        position: absolute;
+        right: 10px;
+        top: 70px;
+        transform: translate(-10px, 70px);
+    }
+
+    div.purple-circle {
+        height: 95px;
+        width: 95px;
+        border-radius: 50%;
+        background-color: rgba(207, 130, 213, 0.6);
+        z-index: 1;
+        position: absolute;
+        right: 10px;
+        top: 35px;
+        transform: translate(-10px, 35px);
+    }
 }
